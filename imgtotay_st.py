@@ -110,7 +110,29 @@ def convert_url(image_url):
     st.balloons()
 
 
+def add_meta_tags():
+
+    meta_tags_string = """
+    <head>
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="title" content='Image To Tay' />
+    <meta name="description" content='Transform any image to Taylor Swift.' />
+    <meta name="keywords" content="image,taylor swift,imgtotay,tay," />
+    <meta name="referrer" content="origin" />
+    <meta name="description" content="Transform any image to Taylor Swift." />
+    <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/191125_Taylor_Swift_at_the_2019_American_Music_Awards_%28cropped%29.png/330px-191125_Taylor_Swift_at_the_2019_American_Music_Awards_%28cropped%29.png" />
+    <meta property="og:url" content="https://s4a.streamlit.io/banjtheman/imgtotay/master/imgtotay_st.py/+/" />
+    <meta property="og:title" content="Image To Tay" />
+    <meta property="og:description" content="Transform any image to Taylor Swift." />
+    </head>
+    """
+
+    st.markdown(meta_tags_string, unsafe_allow_html=True)
+
+
+
 def main():
+    add_meta_tags()
     st.title("Image to Taylor Swift")
 
     st.header("Enter in a picture url and watch it turn to Taylor Swift")
